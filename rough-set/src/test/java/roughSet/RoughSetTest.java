@@ -49,13 +49,13 @@ public class RoughSetTest {
     @Test
     public void testData1(){
         int []nondataColumnIdx = {0};
-        RoughSet roughSet = new RoughSet("Data1.txt",nondataColumnIdx);
+        RoughSet roughSet = new RoughSet("testcase/Data1.txt",nondataColumnIdx);
         roughSet.table.printTableTitles();
         roughSet.attributeReduce();
         roughSet.table.printTableTitles();
         roughSet.attributeValueReduce();
         roughSet.printRules();
-        RoughSet testRS = new RoughSet("Data1.txt",nondataColumnIdx);
+        RoughSet testRS = new RoughSet("testcase/Data1.txt",nondataColumnIdx);
         for(int i = 0;i<testRS.table.data.get(0).content.length;i++){
             MySet pres = new MySet();
             for(int j = 0;j<testRS.table.data.size()-1;j++){
@@ -76,7 +76,7 @@ public class RoughSetTest {
     @Test
     public void testData2(){
         int []nondataColumnIdx = {0,0};
-        RoughSet roughSet = new RoughSet("Data2.txt",nondataColumnIdx);
+        RoughSet roughSet = new RoughSet("testcase/Data2.txt",nondataColumnIdx);
         EqualFrequency.discrete(roughSet);
         roughSet.table.printData();
         //System.out.println(roughSet.table.data.get(0).data[0]);
@@ -85,7 +85,7 @@ public class RoughSetTest {
         roughSet.table.printTableTitles();
         roughSet.attributeValueReduce();
         roughSet.printRules();
-        RoughSet testRS = new RoughSet("Data2.txt",nondataColumnIdx);
+        RoughSet testRS = new RoughSet("testcase/Data2.txt",nondataColumnIdx);
         EqualFrequency.discrete(testRS);
         for(int i = 0;i<testRS.table.data.get(0).content.length;i++){
             MySet pres = new MySet();
@@ -134,7 +134,7 @@ public class RoughSetTest {
 		}*/
 
         int []nondataColumnIdx = {0,0};
-        RoughSet roughSet = new RoughSet("Data2.txt",nondataColumnIdx);
+        RoughSet roughSet = new RoughSet("testcase/Data2.txt",nondataColumnIdx);
         EqualFrequency.discrete(roughSet);
         roughSet.attributeReduce();
 
@@ -184,7 +184,7 @@ public class RoughSetTest {
     @Test
     public void testData2WithBP(){
         int []nondataColumnIdx = {0,0};
-        RoughSet roughSet = new RoughSet("Data2.txt",nondataColumnIdx);
+        RoughSet roughSet = new RoughSet("testcase/Data2.txt",nondataColumnIdx);
         EqualFrequency.discrete(roughSet);
 
 

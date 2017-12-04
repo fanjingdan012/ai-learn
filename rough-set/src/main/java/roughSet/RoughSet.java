@@ -14,7 +14,7 @@ import util.Table;
 
 public class RoughSet {
 	public int [] nondataColumnIdx={0};
-	public String filename = "Data1.txt";
+	public String filename = "testcase/Data1.txt";
 	public Table table = new Table(filename);
 	//public MySet conflictSet = new MySet();
 	public MySet<Rule> ruleSet = new MySet<Rule>();
