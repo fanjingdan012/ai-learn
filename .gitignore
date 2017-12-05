@@ -50,3 +50,4 @@ classes/
 .settings/
 .idea/
 *.iml
+bin/
